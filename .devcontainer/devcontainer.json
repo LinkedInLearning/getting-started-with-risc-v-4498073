@@ -3,6 +3,17 @@
     "GitHub.github-vscode-theme"
     // Additional Extensions Here
   ],
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "hm.riscv-venus",
+        "zhwu95.riscv"
+      ]
+    }
+  },
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
   "postAttachCommand": "git pull --all"
   
