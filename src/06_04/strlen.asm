@@ -2,22 +2,36 @@
 # Exercise 06_04
 # strlen, by Eduardo Corpeño 
 
-#  int count = 0;
-#  char *str = “RISC-V is the bomb!!!”;
+###################################################################
+# Description
 #
-#  int main(){
-#    while(*str){
-#      count++;
-#      str++;
-#    }
-#  }
+# This assembly code roughly implements the following
+# algorithm to calculate the length of a string.
+#
+#   int count = 0;
+#   char *str = “RISC-V is the bomb!!!”;
+#
+#   int main(){
+#     while(*str){
+#       count++;
+#       str++;
+#     }
+#   }
+###################################################################
 
+# Data Section
 .data
 count: .word   0
 str:   .string "RISC-V is the bomb!!!"
 
 
+# Code Section
 .text
+
+###################################################################
+# Main entry point.
+# The program starts here, at address 0x00000000
+###################################################################
 
 main:
     la   t0, count   # t0 points to count
@@ -33,13 +47,19 @@ while:
 
 finish:
     sw   t1, 0(t0)   # Store t1 into count
-mv a1, t1
-addi a0, x0, 1 # If we have input we echo it in the console
-ecall   # If we have input we echo it in the console
-li a1, '\n'
-addi a0, x0, 11 # If we have input we echo it in the console
-ecall   # If we have input we echo it in the console
 
-forever:
-#    j    forever     # Hang forever
+    # print_int(a1) - Environment call 1
+    mv a1, t1
+    li a0, 1  
+    ecall           
+    
+    # print_char() - Environment call 11
+    li a1, '\n'
+    li a0, 11
+    ecall
+    ecall
 
+    # Exit - Environment call 17
+    addi a0, x0, 17
+    ecall
+    

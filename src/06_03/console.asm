@@ -2,6 +2,13 @@
 # Exercise 06_03
 # Console Interaction, by Eduardo Corpeño 
 
+###################################################################
+# Description
+#
+# This assembly code asks the user's name in the console
+# and responds with a message using the entered name.
+###################################################################
+
 # Data Section
 .data
 prompt:   .string   "Hi, what's your name?\n" 
@@ -39,9 +46,9 @@ main:
     li a0, 4
     ecall
     
-    # print_char() - Environment call 11
-    li a0, 11
+    # print_char(a0) - Environment call 11
     li a1, '!'
+    li a0, 11
     ecall
     
     li a1, '\n'
@@ -61,7 +68,7 @@ main:
 
 read_str:
     # Initializations
-    li  a5, 1     # a5 holds comparison value for branching
+    li a5, 1     # a5 holds comparison value for branching
 
     # Enable console input - Environment call 0x130
     li a0, 0x130 
