@@ -18,7 +18,6 @@ str:   .string "RISC-V is the bomb!!!"
 
 
 .text
-.globl main
 
 main:
     la   t0, count   # t0 points to count
@@ -34,7 +33,13 @@ while:
 
 finish:
     sw   t1, 0(t0)   # Store t1 into count
+mv a1, t1
+addi a0, x0, 1 # If we have input we echo it in the console
+ecall   # If we have input we echo it in the console
+li a1, '\n'
+addi a0, x0, 11 # If we have input we echo it in the console
+ecall   # If we have input we echo it in the console
 
 forever:
-    j    forever     # Hang forever
+#    j    forever     # Hang forever
 

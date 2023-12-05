@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "venus",
+            "request": "launch",
+            "name": "Launch Current File",
+            "program": "${file}",
+            "stopOnEntry": true,
+            "stopAtBreakpoints": true,
+            "openViews": []
+        },
+        {
+            "type": "venus",
+            "request": "launch",
+            "name": "Launch with Microcontroller Board",
+            "program": "${file}",
+            "stopOnEntry": true,
+            "stopAtBreakpoints": true,
+            "openViews": [
+                "Seven Segment Board"
+            ]
+        },
+        {
+            "type": "venus",
+            "request": "launch",
+            "name": "Launch with LED Matrix",
+            "program": "${file}",
+            "stopOnEntry": true,
+            "stopAtBreakpoints": true,
+            "openViews": [
+                "LED Matrix"
+            ],
+            "ledMatrixSize": {
+                "x": 11,
+                "y": 11
+            }
+        }
+    ]
+}
