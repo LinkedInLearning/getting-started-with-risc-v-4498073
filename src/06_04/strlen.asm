@@ -1,5 +1,5 @@
 # Getting Started with RISC-V
-# Exercise 06_03
+# Exercise 06_04
 # strlen, by Eduardo Corpeño 
 
 #  int count = 0;
