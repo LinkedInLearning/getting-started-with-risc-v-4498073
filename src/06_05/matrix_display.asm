@@ -1,6 +1,6 @@
 # Getting Started with RISC-V
 # Exercise 06_05
-# Matrix Display, by Eduardo Corpeño 
+# LED Matrix Display, by Eduardo Corpeño 
 
 ###################################################
 # Description
@@ -32,13 +32,13 @@ inner:
     lw a2, 0(s0)     # a2 holds the current pixel
     slli a1, s2, 16  # Shift x coordinate in a1
     or a1, a1, s1    # Join y coordinate in a1
-    ecall
+    ecall            # Drive LED at {x,y} 
 
     addi s0, s0, 4    # Next pixel
     addi s1, s1, 1    # Next y
     bne s1, s3, inner # Iterate until y == 10
     
-    addi s2, s2, 1    # next x
+    addi s2, s2, 1    # Next x
     bne s2, s3, outer # Iterate until x == 10
 
     # Exit - Environment call 10

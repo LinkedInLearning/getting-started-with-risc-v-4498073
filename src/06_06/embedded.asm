@@ -58,7 +58,7 @@ loop:
     li a0, 0x120
     ecall
     
-
+    
     # read_buttons() - Environment call 0x122
     li a0, 0x122
     ecall

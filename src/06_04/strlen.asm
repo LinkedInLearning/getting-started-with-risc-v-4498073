@@ -13,10 +13,11 @@
 #   char *str = “RISC-V is the bomb!!!”;
 #
 #   int main(){
-#     while(*str){
-#       count++;
-#       str++;
-#     }
+#       while(*str){
+#           count++;
+#           str++;
+#       }
+#       print(count);
 #   }
 ###################################################
 
