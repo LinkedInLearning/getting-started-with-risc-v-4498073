@@ -1,5 +1,5 @@
 # Getting Started with RISC-V
-# Exercise 06_05
+# Exercise 06_06
 # LED Matrix Display, by Eduardo Corpeño 
 
 ###################################################

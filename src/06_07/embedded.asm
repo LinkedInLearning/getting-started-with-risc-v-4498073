@@ -1,5 +1,5 @@
 # Getting Started with RISC-V
-# Exercise 06_06
+# Exercise 06_07
 # Embedded Application, by Eduardo Corpeño 
 
 ###################################################

@@ -1,5 +1,5 @@
 # Getting Started with RISC-V
-# Exercise 06_04
+# Exercise 06_05
 # strlen, by Eduardo Corpeño 
 
 ###################################################
